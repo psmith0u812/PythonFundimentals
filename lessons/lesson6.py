@@ -92,7 +92,7 @@ golf = 42
 hotel = 24
 
 # if shorthand
-result = golf if golf> hotel else hotel
+result = golf if golf > hotel else hotel
 print(result)
 
 print('both are equal' if golf == hotel else 'golf is greater' if golf
