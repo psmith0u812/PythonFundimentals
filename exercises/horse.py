@@ -45,10 +45,39 @@ class Horse:
     def horse_frame(self, body):
         self._horse_frame = body
 
+
     def show_horse(self):
         return f' Before you stands a {self._horse_frame} horse, its {self._mane_style} mane glistening in the sun\n' \
                f'{self._tail_length} swaying idly, and see its hooves in {self._hooves_condition} conditon.' \
                f'\n It notices you.\n'
+
+
+class Zebra(Horse):
+    def __init__(self,  tail, hooves, mane, body, ears):
+        super().__init__( tail, hooves, mane, body)
+        self._ears = ears
+
+    @property
+    def ears(self):
+        return self._ears
+
+    @ears.setter
+    def ears(self, ears):
+        self._ears = ears
+
+
+class Pony(Horse):
+    def __init__(self,  tail, hooves, mane, body, bow):
+        super().__init__( tail, hooves, mane, body)
+        self._bow = bow
+
+    @property
+    def bow(self):
+        return self._bow
+
+    @bow.setter
+    def bow(self, bow):
+        self._bow = bow
 
 
 my_horse = Horse('long', 'good', 'long', 'heavy')
